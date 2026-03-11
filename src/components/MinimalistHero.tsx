@@ -211,7 +211,7 @@ export const MinimalistHero = ({
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 1.2 }}
-          className="absolute z-20 flex flex-col items-center md:items-start justify-start md:justify-center text-center md:text-left w-full md:w-auto pt-6 md:pt-0 top-[70vh] md:top-1/2 md:-translate-y-[45%] md:right-[5%] lg:right-[8%] pointer-events-none"
+          className="absolute z-20 flex flex-col items-center md:items-end justify-start md:justify-center text-center md:text-right w-full md:w-auto pt-6 md:pt-0 top-[70vh] md:top-1/2 md:-translate-y-[45%] md:right-[5%] lg:right-[8%] pointer-events-none"
         >
           <h1 className="font-sans font-black text-[4.2rem] sm:text-[5.5rem] md:text-[8rem] lg:text-[11rem] xl:text-[180px] leading-[0.8] tracking-tighter drop-shadow-md"
               style={{
