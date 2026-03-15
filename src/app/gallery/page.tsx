@@ -5,7 +5,7 @@ import { InfiniteDraggableGrid, CATEGORY_COORDINATES, InfiniteDraggableGridHandl
 import { LimelightNav } from "@/components/LimelightNav";
 import { CATEGORIES, NAV_ITEMS } from "@/constants/navigation";
 
-export default function PortfolioPage() {
+export default function GalleryPage() {
   const [activeCategory, setActiveCategory] = useState("Newborn");
   const gridRef = useRef<InfiniteDraggableGridHandle>(null);
 

@@ -18,6 +18,7 @@
   /* Soft Grey */
 
   --animate-diamond-rotate: diamond-rotate 8s linear infinite;
+  --animate-grid: grid 15s linear infinite;
 
   @keyframes diamond-rotate {
     0% {
@@ -26,6 +27,15 @@
 
     100% {
       transform: rotate(360deg);
+    }
+  }
+
+  @keyframes grid {
+    0% {
+      transform: translateY(-50%);
+    }
+    100% {
+      transform: translateY(0);
     }
   }
 }

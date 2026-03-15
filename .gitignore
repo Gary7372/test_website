@@ -46,3 +46,11 @@ node_modules_backup/
 lnading_page_camera_scroll/
 *.log
 *.txt
+*.mp4
+infinite-gallery.html
+/public/temp/
+/public/baby/
+/public/family/
+/public/maternity/
+/public/frames/
+/public/hero/

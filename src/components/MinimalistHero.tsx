@@ -176,11 +176,19 @@ export const MinimalistHero = ({
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 1 }}
           className={cn(
-            "absolute z-20 flex flex-col justify-end md:justify-center text-center md:text-left px-6 md:px-0 w-full md:w-auto left-0 md:left-[8%] lg:left-[10%] bottom-[30vh] md:bottom-auto md:top-1/2 md:-translate-y-[45%] pt-20 pb-4 md:pt-0 md:pb-0 pointer-events-auto",
-            onReadLess ? "bg-gradient-to-t from-[#2D2D2D]/0 via-[#2D2D2D]/80 to-[#2D2D2D] bg-[length:100%_150%] bg-bottom md:bg-none" : ""
+            "absolute z-30 flex flex-col px-6 md:px-0 w-full md:w-auto left-0 md:left-[8%] lg:left-[10%] pointer-events-auto transition-all duration-500 ease-in-out",
+            // Desktop State (Unchanged)
+            "md:top-1/2 md:-translate-y-[45%] md:justify-center md:text-left md:bottom-auto",
+            // Mobile State
+            onReadLess 
+              ? "top-[18vh] justify-start text-left" // Expanded: Top-aligned to grow down
+              : "bottom-[30vh] justify-end text-center" // Collapsed: Bottom-aligned
           )}
         >
-          <div className="mx-auto md:mx-0 max-w-[95%] md:max-w-sm text-[12px] md:text-[16px] leading-relaxed text-[#E8E4D9] whitespace-pre-wrap font-sans opacity-[0.85] md:opacity-90 drop-shadow-md md:drop-shadow-none">
+          <div className={cn(
+            "mx-auto md:mx-0 max-w-[95%] md:max-w-sm text-[12px] md:text-[16px] leading-relaxed text-[#E8E4D9] whitespace-pre-wrap font-sans opacity-[0.85] md:opacity-90 drop-shadow-md md:drop-shadow-none transition-all duration-500",
+            onReadLess ? "max-h-[42vh] overflow-y-auto md:max-h-none md:overflow-visible pr-2 custom-scrollbar" : ""
+          )}>
             {mainText}
           </div>
           
@@ -211,9 +219,9 @@ export const MinimalistHero = ({
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6, delay: 1.2 }}
-          className="absolute z-20 flex flex-col items-center md:items-end justify-start md:justify-center text-center md:text-right w-full md:w-auto pt-6 md:pt-0 top-[70vh] md:top-1/2 md:-translate-y-[45%] md:right-[5%] lg:right-[8%] pointer-events-none"
+          className="absolute z-20 flex flex-col items-center md:items-end justify-start md:justify-center text-center md:text-right w-full md:w-auto pt-6 md:pt-0 top-[65vh] md:top-1/2 md:-translate-y-[45%] md:right-[5%] lg:right-[8%] pointer-events-none"
         >
-          <h1 className="font-sans font-black text-[4.2rem] sm:text-[5.5rem] md:text-[8rem] lg:text-[11rem] xl:text-[180px] leading-[0.8] tracking-tighter drop-shadow-md"
+          <h1 className="font-sans font-black text-[3.2rem] sm:text-[5.5rem] md:text-[8rem] lg:text-[11rem] xl:text-[180px] leading-[0.8] tracking-tighter drop-shadow-md"
               style={{
                 color: '#E8E4D9',
                 textShadow: '0 4px 20px rgba(0,0,0,0.15)'

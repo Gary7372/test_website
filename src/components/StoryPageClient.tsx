@@ -177,7 +177,7 @@ export default function StoryPageClient() {
                                 ]}
                                 mainText={
                                   isHeroExpanded ? (
-                                    <>
+                                    <span className="font-bold md:font-normal">
                                       2019 – 2023{"\n"}
                                       • Completed my MBA and worked as a Product Manager in the corporate world.{"\n"}
                                       • Photography always remained a strong passion alongside my career.{"\n"}
@@ -190,13 +190,13 @@ export default function StoryPageClient() {
                                       2025 – Present{"\n"}
                                       • Opened our own studio in Nilaya Greens, Rajnagar Ext., Ghaziabad.{"\n"}
                                       • Today, we continue capturing memories that families will cherish forever.
-                                    </>
+                                    </span>
                                   ) : (
-                                    <>
+                                    <span className="font-bold md:font-normal">
                                       2019 – 2023{"\n"}
                                       • Completed my MBA and worked as a Product Manager in the corporate world.{"\n"}
                                       • Photography always remained a strong passion alongside my career.
-                                    </>
+                                    </span>
                                   )
                                 }
                                 onReadMore={!isHeroExpanded ? () => setIsHeroExpanded(true) : undefined}

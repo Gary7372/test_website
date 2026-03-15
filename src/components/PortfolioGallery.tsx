@@ -8,31 +8,7 @@ import { ZoomParallax } from "@/components/ZoomParallax";
 import BabyGallery from "@/components/BabyGallery";
 import FamilyGallery from "@/components/FamilyGallery";
 
-// --- Category Icons ---
-
-const NewbornIcon = (props: React.SVGProps<SVGSVGElement>) => <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2a5 5 0 1 0 0 10A5 5 0 0 0 12 2z" /><path d="M9 21c0-3 1.5-5 3-5s3 2 3 5" /><path d="M4 21c0-4 2-7 5-8" /><path d="M20 21c0-4-2-7-5-8" /></svg>;
-const MaternityIcon = (props: React.SVGProps<SVGSVGElement>) => <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="6" r="3" /><path d="M9 22V12c0-1.5 1.3-3 3-5 1.7 2 3 3.5 3 5v10" /><path d="M9 17h6" /></svg>;
-const MilestoneIcon = (props: React.SVGProps<SVGSVGElement>) => <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M12 2a9 9 0 0 1 9 9c0 5-9 13-9 13S3 16 3 11a9 9 0 0 1 9-9z" /><circle cx="12" cy="11" r="3" /></svg>;
-const CakeIcon = (props: React.SVGProps<SVGSVGElement>) => <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8" /><path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1" /><path d="M2 21h20" /><path d="M7 8v2" /><path d="M12 8v2" /><path d="M17 8v2" /><path d="M7 4h.01" /><path d="M12 4h.01" /><path d="M17 4h.01" /></svg>;
-const BirthdayIcon = (props: React.SVGProps<SVGSVGElement>) => <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M9.5 4c0-1.5 2-3.5 2.5-3.5S14.5 2.5 14.5 4" /><path d="M4 13h16" /><rect x="2" y="13" width="20" height="8" rx="1" /><path d="M6 13V7" /><path d="M12 13V7" /><path d="M18 13V7" /></svg>;
-const FamilyIcon = (props: React.SVGProps<SVGSVGElement>) => <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>;
-const OutdoorIcon = (props: React.SVGProps<SVGSVGElement>) => <svg {...props} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M3 17l4-8 4 5 3-3 4 6" /><path d="M3 21h18" /><circle cx="18" cy="6" r="2" /></svg>;
-
-const CATEGORIES = ["Newborn", "Maternity", "Family", "Outdoor", "Milestone"];
-
-const CATEGORY_ICONS = [
-    <NewbornIcon key="newborn" />,
-    <MaternityIcon key="maternity" />,
-    <FamilyIcon key="family" />,
-    <OutdoorIcon key="outdoor" />,
-    <MilestoneIcon key="milestone" />,
-];
-
-const NAV_ITEMS = CATEGORIES.map((cat, i) => ({
-    id: cat,
-    icon: CATEGORY_ICONS[i],
-    label: cat,
-}));
+import { CATEGORIES, NAV_ITEMS } from "@/constants/navigation";
 
 const PORTFOLIO_DATA = [
     { id: 1, category: "Newborn", src: "https://images.unsplash.com/photo-1542038784456-1ea8e935640e?q=80&w=800&auto=format&fit=crop", alt: "Newborn sleeping peacefully", span: "md:col-span-1 md:row-span-1" },
